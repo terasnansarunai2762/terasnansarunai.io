@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.1rem;
+  background: transparent;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-family: fantasy;
+  color: black;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.carousel {
+  width: 100%;
+  background: rgb(114, 113, 110);
+}
+
+.carousel-inner {
+  max-height: 400px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-article {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  transform: translateX(50px);
+  font-family: Verdana;
+  font-size: 1.2rem;
+  justify-content: center;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.judul {
+  color: greenyellow;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 50px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.beranda {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding: 20px;
+  border-bottom: 5px solid #ccc;
+}
+
+section.halaman1,
+section.halaman2,
+section.halaman3 {
+  background-color: #ffffff;
+}
+
+section.halaman3 {
+  border-bottom: none;
+}
+
+.text-article {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.fantasy-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Didot', serif;
+  font-weight: bold;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #111;
+}
+
+.tabel-gambar {
+  background: teal;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 80px;
+  grid-gap: 40px;
+}
+
+.grid > article:hover {
+  transform: scale(1.1);
+}
+
+.grid > article {
+  box-shadow: 10px 5px 5px 0px #212529;
+  border-radius: 20px;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  transition: transform 0.3s;
+}
+
+.grid > article img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.download {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transform: translateX(20px);
+  margin-top: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-content p,
+.text-content ul {
+  font-size: 1.2rem;
+  padding-left: 20px;
+}
+
+.text-content h2 {
+  margin-top: 0;
+}
+
+.section img {
+  margin-left: auto;
+}
+
+.halaman1 .text-content,
+.halaman2 .text-content,
+.halaman3 .text-content {
+  padding-right: 2rem;
+}
+
+.halaman1 .text-end img,
+.halaman2 .text-end img,
+.halaman3 .text-end img {
+  margin-left: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #212529;
+  height: 80px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.img-slides {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-slides img {
+  width: 100%;
+  height: auto;
+  display: none;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.img-slides img.active {
+  display: block;
+}
+
+.judul {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+section {
+  padding: 10px;
+}
+
+.fantasy-title {
+  font-size: 1.5rem;
+}
+
+.halaman1 .text-content,
+.halaman2 .text-content,
+.halaman3 .text-content {
+  padding: 0;
+}
+
+.halaman1 .text-end img,
+.halaman2 .text-end img,
+.halaman3 .text-end img {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+
+footer {
+  height: auto;
+  padding: 20px 0;
+  margin-top: 30px;
+}
